@@ -1,0 +1,17 @@
+@page "/editor"
+@inherits MarkdownEditor.Components.EditorBase
+
+<h1>Markdown Editor</h1>
+
+<div style="height: 300px">
+    <div class="row h-100">
+        <div class="col-md h-100">
+            <textarea class="form-control h-100 w-100" @oninput="HandleOnInput"></textarea>
+        </div>
+        <div class="col-md h-100">
+            <div style="border: solid 1px;" class="h-100">
+                @((MarkupString)MarkdownText)
+            </div>
+        </div>
+    </div>
+</div>
